@@ -2,6 +2,7 @@
 import { RiCloseLargeLine, RiMenuLine } from '@remixicon/react'
 import styles from'./Navbar.module.scss'
 import { useState } from 'react'
+import logo from '../../assets/logo.png'
 
 const Navbar = () => {
 
@@ -14,22 +15,25 @@ const Navbar = () => {
   return (
     <nav>
         <div className={styles.menu}>
-          <img src="https://e7.pngegg.com/pngimages/487/456/png-clipart-computer-icons-business-logo-youtube-cartoon-green-small-rocket-cartoon-character-painted.png" alt="" />
+          <div className={styles.logo}>
+            <img src={logo} alt="" />
+          <h1>RealaEditor</h1>
+          </div>
         <div className={styles.menu_i}>
             <button onClick={toggleMenu}>{isOpen?<RiCloseLargeLine/> : <RiMenuLine/>}</button>
         </div>
         </div>
 
-        {isOpen && (
-          <ul>
+        
+          <ul className={`${styles.mobileList} ${isOpen ? styles.open : ''}`}>
           <li>Projects</li>
           <li>Services</li>
           <li>Process</li>
           <li>About</li>
         </ul>
-        )}
+        
 
-        <ul className={styles.list}>
+        <ul className={styles.desktopList}>
           <li>Projects</li>
           <li>Services</li>
           <li>Process</li>

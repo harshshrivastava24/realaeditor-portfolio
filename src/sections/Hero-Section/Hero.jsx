@@ -1,6 +1,7 @@
 // import React from 'react'
 import { useEffect, useState } from 'react'
 import styles from './Hero.module.scss'
+import MainBg from '../../components/MainBG/MainBg'
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -14,6 +15,7 @@ const Hero = () => {
   }, [])
   return (
     <section className={styles.section1}>
+      <MainBg/>
         <div className={styles.left}>
           <div className={`${styles.text} ${isLoaded? styles.animated: ''}`} >
             <h1>Raw Footage Made Cinematic.</h1>

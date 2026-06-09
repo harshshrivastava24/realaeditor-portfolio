@@ -1,6 +1,9 @@
 nav {
-    position: relative;
-    z-index: 3;
+    position: fixed;
+    z-index: 4;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
 
     background-color: rgba(18, 16, 16, 0.4);
     -webkit-backdrop-filter: blur(12px);
@@ -9,37 +12,81 @@ nav {
     
     padding: 1rem 1.2rem;
     width: 95%;
-    border-radius: 2rem;
-   
+    border-radius: 2rem;   
+
     .menu {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        width: 100%;
         
-        img {
-        height: 2rem;
-        width: 2rem;
-    }
+        .logo {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+            img {
+            height: 2.4rem;
+            width: 2.4rem;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+
+        h1{
+            display: none;
+            font-weight: 500;
+            font-size: 1.6rem;
+        }
+        }
 
     .menu_i {
+        display: flex;
+        align-items: center;
         button {
             color: white;
             font-size: 1.3rem;
             background: none;
             border: none;
+            cursor: pointer;
         }
     }
     }
 
-    ul {
-       list-style: none;
-       text-align: center;
-       li{
-        padding: 0.8rem;
-        font-size: 1.1rem;
-       }
+
+    .mobileList {
+        list-style: none;
+        text-align: center;
+        width: 100%;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        max-height: 0;
+
+        transition:opacity 0.3s ease,
+                   transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                   max-height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+        pointer-events: none;
+
+        &.open {
+            opacity: 1;
+            visibility: visible;
+            max-height: 300px;
+            transform: translateY(0);
+            margin-top: 1.5rem;
+        }
+
+        li {
+            padding: 0.8rem 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: white;
+            cursor: pointer;
+        }
     }
 
-    .list {
+    .desktopList {
         display: none;
     }
 }
@@ -52,13 +99,38 @@ nav {
         width: max-content;
 
         .menu {
+            .logo {
+                h1 {
+                    display: initial;
+                }
+            }
             .menu_i {
                 display: none;
             }
         }
-        .list {
-            display: flex;
 
+        .mobileList {
+         display: none;
+    }
+       
+
+        .desktopList {
+         display: flex;
+         list-style: none;
+         align-items: center;
+         gap: 3rem;
+
+      li {
+         font-size: 0.95rem;
+         font-weight: 500;
+         color: white;
+         cursor: pointer;
+         transition: color 0.2s ease, transform 0.2s ease;
+
+        &:hover {
+          transform: translateY(-1px); /* Subtle luxury lifting micro-interaction */
         }
+      }
+    }
     }
 }
