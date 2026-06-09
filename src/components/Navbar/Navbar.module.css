@@ -1,0 +1,51 @@
+nav {
+  position: relative;
+  z-index: 3;
+  background-color: rgba(18, 16, 16, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem 1.2rem;
+  width: 95%;
+  border-radius: 2rem;
+}
+nav .menu {
+  display: flex;
+  justify-content: space-between;
+}
+nav .menu img {
+  height: 2rem;
+  width: 2rem;
+}
+nav .menu .menu_i button {
+  color: white;
+  font-size: 1.3rem;
+  background: none;
+  border: none;
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  padding: 0.8rem;
+  font-size: 1.1rem;
+}
+nav .list {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  nav .menu .menu_i {
+    display: none;
+  }
+  nav .list {
+    display: flex;
+  }
+}/*# sourceMappingURL=Navbar.module.css.map */

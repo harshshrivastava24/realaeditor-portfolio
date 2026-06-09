@@ -1,0 +1,64 @@
+nav {
+    position: relative;
+    z-index: 3;
+
+    background-color: rgba(18, 16, 16, 0.4);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    
+    padding: 1rem 1.2rem;
+    width: 95%;
+    border-radius: 2rem;
+   
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        
+        img {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .menu_i {
+        button {
+            color: white;
+            font-size: 1.3rem;
+            background: none;
+            border: none;
+        }
+    }
+    }
+
+    ul {
+       list-style: none;
+       text-align: center;
+       li{
+        padding: 0.8rem;
+        font-size: 1.1rem;
+       }
+    }
+
+    .list {
+        display: none;
+    }
+}
+
+@media (min-width:800px) {
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        width: max-content;
+
+        .menu {
+            .menu_i {
+                display: none;
+            }
+        }
+        .list {
+            display: flex;
+
+        }
+    }
+}
