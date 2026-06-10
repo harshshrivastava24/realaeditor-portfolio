@@ -1,0 +1,56 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 3rem;
+}
+.services .head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+.services .head .heading {
+  padding: 0.8rem 1rem;
+  border: 1px solid rgb(73, 71, 71);
+  background-color: rgb(22, 22, 22);
+  border-radius: 1rem;
+}
+.services .head p {
+  min-width: 28ch;
+}
+.services .cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.services .cards .card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  border: 2px solid rgb(73, 71, 71);
+  border-radius: 1rem;
+  background-color: rgb(22, 22, 22);
+}
+.services .cards .card img {
+  height: 10rem;
+  width: 100%;
+  border-radius: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.services .cards .card .text {
+  text-align: center;
+}
+
+@media (min-width: 800px) {
+  .services .cards {
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=Services.module.css.map */

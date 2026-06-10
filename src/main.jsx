@@ -6,7 +6,7 @@ import './index.css'
 import Navbar from './components/Navbar/Navbar.jsx'
 import MouseFollow from './components/MouseFollow/MouseFollow.jsx'
 import Hero from './sections/Hero-Section/Hero.jsx'
-import About from './sections/About-section/About.jsx'
+import Services from './sections/Services-section/Services.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -14,7 +14,7 @@ createRoot(document.getElementById('root')).render(
       <Navbar/>
     <Hero/>
     <MouseFollow/>
-    <About/>
+    <Services/>
     </main>
   </StrictMode>,
 )
