@@ -20,7 +20,7 @@ const Services = () => {
     },
   ]
   return (
-    <div className={styles.services}>
+    <section className={styles.services}>
         <div className={styles.head}>
           <div className={styles.heading}>Services</div>
           <p>Everything you need to scale your content.</p>
@@ -40,7 +40,7 @@ const Services = () => {
          )
        })}
        </div>
-    </div>
+    </section>
   )
 }
 
