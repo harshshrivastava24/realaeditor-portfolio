@@ -10,11 +10,11 @@ import Services from './sections/Services-section/Services.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <main>
+    
       <Navbar/>
     <Hero/>
     <MouseFollow/>
     <Services/>
-    </main>
+    
   </StrictMode>,
 )
