@@ -24,7 +24,8 @@
   font-weight: 400;
 }
 .aboutSection .aboutContainer .about p {
-  max-width: 40ch;
+  width: 100%;
+  max-width: 55ch;
 }
 .aboutSection .aboutContainer .socials {
   display: flex;
@@ -33,6 +34,7 @@
 .aboutSection .profilePic {
   height: 100%;
   width: 100%;
+  aspect-ratio: 1/1;
 }
 .aboutSection .profilePic img {
   height: 100%;
@@ -49,6 +51,7 @@
     gap: 4rem;
   }
   .aboutSection .aboutContainer {
+    flex: 1;
     width: 60%;
     align-items: flex-start;
   }

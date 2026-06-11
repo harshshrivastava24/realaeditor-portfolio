@@ -30,7 +30,8 @@
             }
     
             p {
-                max-width: 40ch;
+                width: 100%;
+                max-width: 55ch;
             }
         }
 
@@ -43,6 +44,7 @@
     .profilePic {
         height: 100%;
         width: 100%;
+        aspect-ratio: 1/1;
 
         img {
             height: 100%;
@@ -61,6 +63,7 @@
         gap: 4rem;
 
         .aboutContainer{
+            flex: 1;
             width: 60%;
             align-items: flex-start;
             
