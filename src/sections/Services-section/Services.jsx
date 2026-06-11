@@ -12,7 +12,7 @@ const Services = () => {
       </div>
       <div className={styles.cards}>
         <div className={styles.card}>
-          <video autoPlay muted loop playsInline src="https://www.pexels.com/download/video/34158991/" ></video>
+          <video autoPlay muted loop playsInline src="https://www.pexels.com/download/video/35769389/" ></video>
           <div className={styles.title}>
             <h2>Sound Design</h2>
           </div>
@@ -51,7 +51,7 @@ const Services = () => {
           </div>
         </div>
         <div className={styles.card}>
-          <video autoPlay muted loop playsInline src="https://www.pexels.com/download/video/34158991/" ></video>
+          <video autoPlay muted loop playsInline src="https://www.pexels.com/download/video/35769389/" ></video>
           <div className={styles.title}>
             <h2>Sound Design</h2>
           </div>

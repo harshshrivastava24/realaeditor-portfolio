@@ -60,9 +60,6 @@
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 .services .cards .card .sliderContainer .afterImg {
   display: block;
