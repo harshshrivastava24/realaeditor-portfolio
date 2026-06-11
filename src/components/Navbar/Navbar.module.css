@@ -27,6 +27,8 @@ nav .menu .logo img {
   width: 2.4rem;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
   border-radius: 0.5rem;
 }
 nav .menu .logo h1 {

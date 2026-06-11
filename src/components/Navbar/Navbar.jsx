@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className={styles.menu}>
           <div className={styles.logo}>
             <img src={logo} alt="" />
-          <h1>RealaEditor</h1>
+          <h1>realaeditor</h1>
           </div>
         <div className={styles.menu_i}>
             <button onClick={toggleMenu}>{isOpen?<RiCloseLargeLine/> : <RiMenuLine/>}</button>

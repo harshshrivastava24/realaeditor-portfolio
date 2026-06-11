@@ -1,1 +1,65 @@
-/*# sourceMappingURL=About.module.css.map */
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 3rem;
+  gap: 2rem;
+}
+.aboutSection .aboutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.aboutSection .aboutContainer .head h1 {
+  font-weight: 500;
+}
+.aboutSection .aboutContainer .about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.aboutSection .aboutContainer .about h2 {
+  font-weight: 400;
+}
+.aboutSection .aboutContainer .about p {
+  max-width: 40ch;
+}
+.aboutSection .aboutContainer .socials {
+  display: flex;
+  gap: 1rem;
+}
+.aboutSection .profilePic {
+  height: 100%;
+  width: 100%;
+}
+.aboutSection .profilePic img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+}
+
+@media (min-width: 800px) {
+  .aboutSection {
+    padding: 5rem 12rem;
+    flex-direction: row-reverse;
+    gap: 4rem;
+  }
+  .aboutSection .aboutContainer {
+    width: 60%;
+    align-items: flex-start;
+  }
+  .aboutSection .aboutContainer .about {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .aboutSection .aboutContainer .about p {
+    max-width: 45ch;
+  }
+  .aboutSection .profilePic {
+    width: 40%;
+  }
+}/*# sourceMappingURL=About.module.css.map */

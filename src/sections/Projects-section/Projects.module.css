@@ -16,6 +16,14 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   background-color: rgba(18, 16, 16, 0.4);
   border-radius: 1rem;
+  opacity: 0;
+  transform: translateY(40px);
+  will-change: opacity, transform;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.projectsSection .top .head.animated {
+  opacity: 1;
+  transform: translateY(0);
 }
 .projectsSection .top h1 {
   font-size: 1.8rem;
@@ -46,11 +54,11 @@
   }
   .projectsSection .projects {
     flex-direction: row;
-    gap: 2rem;
+    gap: 3rem;
     flex-wrap: wrap;
   }
   .projectsSection .projects .videoContainer {
-    aspect-ratio: 8/13;
+    aspect-ratio: 12/15;
     width: calc(33.33% - 2rem);
   }
 }/*# sourceMappingURL=Projects.module.css.map */

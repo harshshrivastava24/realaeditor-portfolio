@@ -1,13 +1,24 @@
 // import React from 'react'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './Services.module.scss'
 
 const Services = () => {
   const [sliderPosition, setSliderPosition] = useState(50);
+
+  const [isLoaded, setIsLoaded] = useState(false)
+  
+    useEffect(()=> {
+        const timer = setTimeout(() => {
+          setIsLoaded(true)
+        }, 100);
+    
+        return () => clearTimeout(timer)
+      }, [])
+
   return (
     <section className={styles.services}>
       <div className={styles.head}>
-        <div className={styles.heading}>Services</div>
+        <div className={`${styles.heading} ${isLoaded? styles.animated: ''}`}>Services</div>
         <p>Everything you need to scale your content.</p>
       </div>
       <div className={styles.cards}>
