@@ -34,7 +34,6 @@
 .aboutSection .profilePic {
   height: 100%;
   width: 100%;
-  aspect-ratio: 1/1;
 }
 .aboutSection .profilePic img {
   height: 100%;
@@ -49,20 +48,30 @@
     padding: 5rem 12rem;
     flex-direction: row-reverse;
     gap: 4rem;
+    justify-content: center;
   }
   .aboutSection .aboutContainer {
-    flex: 1;
     width: 60%;
     align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .aboutSection .aboutContainer .head h1 {
+    font-size: 2.4rem;
   }
   .aboutSection .aboutContainer .about {
     justify-content: flex-start;
     align-items: flex-start;
   }
+  .aboutSection .aboutContainer .about h2 {
+    font-size: 2rem;
+  }
   .aboutSection .aboutContainer .about p {
+    min-width: 30ch;
     max-width: 45ch;
   }
   .aboutSection .profilePic {
     width: 40%;
+    min-width: 320px;
+    flex-shrink: 1;
   }
 }/*# sourceMappingURL=About.module.css.map */
