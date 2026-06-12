@@ -4,9 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  /* FIX 1: Z-index ko 1 kiya taaki yeh Navbar (z-index: 4) aur Hero (z-index: 3) ke piche rahe */
   z-index: 1;
-  /* FIX 2: Pure background box aur video ke clicks block kiye taaki piche ke buttons click ho sakein */
   pointer-events: none;
   overflow: hidden;
 }
@@ -17,12 +15,10 @@
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  /* Safety filter input layer */
   pointer-events: none;
 }
 .bgContainer .gradientEffect {
-  position: absolute; /* Fixed ki jagah absolute kiya kyunki parent pehle se fixed hai */
-  /* FIX 3: Z-index ko 2 kiya taaki gradient video ke upar rahe par content ke piche */
+  position: absolute;
   z-index: 2;
   top: 0;
   left: 0;

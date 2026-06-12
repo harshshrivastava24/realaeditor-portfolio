@@ -9,6 +9,7 @@ import Hero from './sections/Hero-Section/Hero.jsx'
 import Services from './sections/Services-section/Services.jsx'
 import Projects from './sections/Projects-section/Projects.jsx'
 import About from './sections/About-section/About.jsx'
+import Footer from './sections/Footer/Footer.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -25,5 +26,6 @@ createRoot(document.getElementById('root')).render(
     <section id ="about">
       <About />
     </section>
+    <Footer/>
   </StrictMode>,
 )
