@@ -19,3 +19,11 @@ html, body {
   background-color: var(--bg-dark);
   color: var(--text);
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px;
+}

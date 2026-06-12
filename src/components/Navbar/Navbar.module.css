@@ -72,6 +72,10 @@ nav .mobileList li {
   color: white;
   cursor: pointer;
 }
+nav .mobileList li a {
+  text-decoration: none;
+  color: white;
+}
 nav .desktopList {
   display: none;
 }
@@ -84,7 +88,11 @@ nav .desktopList {
     width: -moz-max-content;
     width: max-content;
   }
-  nav .menu .logo h1 {
+  nav .menu .logo a {
+    text-decoration: none;
+    color: white;
+  }
+  nav .menu .logo a h1 {
     display: initial;
   }
   nav .menu .menu_i {
@@ -105,6 +113,10 @@ nav .desktopList {
     color: white;
     cursor: pointer;
     transition: color 0.2s ease, transform 0.2s ease;
+  }
+  nav .desktopList li a {
+    text-decoration: none;
+    color: white;
   }
   nav .desktopList li:hover {
     transform: translateY(-1px); /* Subtle luxury lifting micro-interaction */

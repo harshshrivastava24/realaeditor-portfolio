@@ -84,6 +84,11 @@ nav {
             font-weight: 500;
             color: white;
             cursor: pointer;
+            
+            a{
+                text-decoration: none;
+                color: white;
+            }
         }
     }
 
@@ -101,9 +106,13 @@ nav {
 
         .menu {
             .logo {
-                h1 {
+               a {
+                text-decoration: none;
+                color: white;
+                 h1 {
                     display: initial;
                 }
+               }
             }
             .menu_i {
                 display: none;
@@ -127,6 +136,11 @@ nav {
          color: white;
          cursor: pointer;
          transition: color 0.2s ease, transform 0.2s ease;
+
+         a{
+            text-decoration: none;
+            color: white;
+        }
 
         &:hover {
           transform: translateY(-1px); /* Subtle luxury lifting micro-interaction */

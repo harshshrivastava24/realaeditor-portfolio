@@ -2,7 +2,7 @@
 import { RiCloseLargeLine, RiMenuLine } from '@remixicon/react'
 import styles from'./Navbar.module.scss'
 import { useState } from 'react'
-import logo from '../../assets/logo.PNG'
+import logo from '../../assets/logo.png'
 
 const Navbar = () => {
 
@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className={styles.menu}>
           <div className={styles.logo}>
             <img src={logo} alt="" />
-          <h1>realaeditor</h1>
+          <a href="https://realaeeditor.netlify.app/"><h1>realaeditor</h1></a>
           </div>
         <div className={styles.menu_i}>
             <button onClick={toggleMenu}>{isOpen?<RiCloseLargeLine/> : <RiMenuLine/>}</button>
@@ -26,18 +26,18 @@ const Navbar = () => {
 
         
           <ul className={`${styles.mobileList} ${isOpen ? styles.open : ''}`}>
-          <li>Projects</li>
-          <li>Services</li>
+          <li><a href="#projects" className={styles.links}>Projects</a></li>
+          <li><a href="#services">Services</a></li>
           <li>Process</li>
-          <li>About</li>
+          <li><a href="#about">About</a></li>
         </ul>
         
 
         <ul className={styles.desktopList}>
-          <li>Projects</li>
-          <li>Services</li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#services">Services</a></li>
           <li>Process</li>
-          <li>About</li>
+          <li><a href="#about">About</a></li>
         </ul>
     </nav>
   )

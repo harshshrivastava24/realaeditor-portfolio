@@ -16,8 +16,14 @@ createRoot(document.getElementById('root')).render(
       <Navbar/>
     <Hero/>
     <MouseFollow/>
-    <Services/>
-    <Projects/>
-    <About/>
+    <section id ="services">
+      <Services/>
+    </section>
+    <section id = "projects">
+      <Projects/>
+    </section>
+    <section id ="about">
+      <About />
+    </section>
   </StrictMode>,
 )
