@@ -1,0 +1,109 @@
+@mixin flexCol ($gap:0rem) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+.bookingSection {
+    @include flexCol(1rem);
+    padding: 2rem 3rem;
+    align-items: flex-start;
+    width: 100%;
+
+    .heading {
+        padding: 0.8rem 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background-color: rgba(18, 16, 16, 0.4);
+        border-radius: 1rem;
+        opacity: 0;
+        transform: translateY(40px);
+        will-change: opacity, transform;
+        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        &.animated{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .booking {
+        @include flexCol(2rem);
+        width: 100%;
+
+        .left {
+            @include flexCol(1rem);
+
+            .text {
+                @include flexCol(0.5rem);
+
+                h2 {
+                    font-weight: 500;
+                    font-size: 2rem
+                }
+
+                p {
+                    width: 100%;
+                    max-width: 32ch;
+                    color: var(--text-muted)
+                }
+            }
+
+            .mail {
+                @include flexCol(0.5rem);
+
+                h3 {
+                    font-weight: 400;
+                    font-size: 1rem;
+                }
+
+                p{
+                    color: var(--text-muted);
+                }
+            }
+
+            .socials {
+                @include flexCol(0.5rem);
+
+                h3 {
+                    font-weight: 400;
+                    font-size: 1rem;
+                }
+
+                .icons {
+                    display: flex;
+                    gap: 0.5rem;
+                    a {
+                        color: white;
+                        background-color: var(--accent-red);
+                        padding: 0.5rem;
+                        border-radius: 2rem;
+                    }
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+    }
+}
+
+@media (min-width:800px) {
+    .bookingSection {
+        padding: 5rem 12rem;
+        .booking {
+            flex-direction: row;
+
+            .left {
+                width: 50%;
+                gap: 5rem;
+            }
+
+            .right {
+                width: 50%;
+            }
+        }
+    }
+}

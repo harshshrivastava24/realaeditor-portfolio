@@ -68,6 +68,7 @@
   width: 1.5rem;
 }
 .footerSection .copyright {
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
