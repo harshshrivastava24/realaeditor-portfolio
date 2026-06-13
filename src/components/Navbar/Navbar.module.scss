@@ -89,10 +89,23 @@ nav {
                 text-decoration: none;
                 color: white;
             }
+
+            button {
+                background-color: red;
+                color: white;
+                padding: 1rem 1.5rem;
+                border: none;
+                outline: none;
+                border-radius: 5rem;
+            }
         }
     }
 
     .desktopList {
+        display: none;
+    }
+
+    .book {
         display: none;
     }
 }
@@ -147,5 +160,21 @@ nav {
         }
       }
     }
+
+    .book {
+        display: initial;
+        width: 100%;
+        a {
+            text-decoration: none;
+            background-color: red;
+            color: white;
+            padding: 1rem 1.5rem;
+            border: none;
+            outline: none;
+            border-radius: 5rem;
+            font-size: 1rem;
+        }
+    }
+
     }
 }

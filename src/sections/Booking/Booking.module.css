@@ -80,6 +80,8 @@
   display: flex;
   border-radius: 1rem;
   overflow: hidden;
+  height: 30rem;
+  width: 100%;
 }
 
 @media (min-width: 800px) {

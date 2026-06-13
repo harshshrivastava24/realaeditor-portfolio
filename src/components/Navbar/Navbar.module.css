@@ -76,7 +76,18 @@ nav .mobileList li a {
   text-decoration: none;
   color: white;
 }
+nav .mobileList li button {
+  background-color: red;
+  color: white;
+  padding: 1rem 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 5rem;
+}
 nav .desktopList {
+  display: none;
+}
+nav .book {
   display: none;
 }
 
@@ -120,5 +131,19 @@ nav .desktopList {
   }
   nav .desktopList li:hover {
     transform: translateY(-1px); /* Subtle luxury lifting micro-interaction */
+  }
+  nav .book {
+    display: initial;
+    width: 100%;
+  }
+  nav .book a {
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    padding: 1rem 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 5rem;
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=Navbar.module.css.map */
