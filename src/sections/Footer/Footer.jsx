@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
 
         <div className={styles.copyright}>
-            <p>2026 realaeeditor All rights reserved.</p>
+            <p>&copy; 2026 realaeditor All rights reserved.</p>
             <p>Built By <span>Harsh</span></p>
         </div>
     </section>

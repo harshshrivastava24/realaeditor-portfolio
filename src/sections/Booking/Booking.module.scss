@@ -9,31 +9,37 @@
     padding: 2rem 3rem;
     align-items: flex-start;
     width: 100%;
-
-    .heading {
-        padding: 0.8rem 1rem;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background-color: rgba(18, 16, 16, 0.4);
-        border-radius: 1rem;
-        opacity: 0;
-        transform: translateY(40px);
-        will-change: opacity, transform;
-        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-                    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        &.animated{
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
+    
     .booking {
         @include flexCol(2rem);
         width: 100%;
-
+        padding: 1rem 1.5rem;
+        border-top: 2px solid grey;
+        border-radius: 2rem;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
         .left {
             @include flexCol(1rem);
 
-            .text {
+            .heading {
+                width: fit-content;
+                padding: 0.8rem 1rem;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                background-color: rgba(18, 16, 16, 0.4);
+                border-radius: 1rem;
+                opacity: 0;
+                transform: translateY(40px);
+                will-change: opacity, transform;
+                transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                            transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+                &.animated{
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+           .leftText {
+            @include flexCol(1rem);
+             .text {
                 @include flexCol(0.5rem);
 
                 h2 {
@@ -80,14 +86,15 @@
                     }
                 }
             }
+           }
         }
 
         .right {
-            display: flex;
-            border-radius: 1rem;
-            overflow: hidden;
-            height: 30rem;
-            width: 100%;
+          width: 100%;
+          height: clamp(20rem, 50vh, 50rem);
+          border-radius: 1rem;
+          overflow: hidden;
+          background: #0d0d0d;
         }
     }
 }
@@ -97,14 +104,20 @@
         padding: 5rem 12rem;
         .booking {
             flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
 
             .left {
-                width: 50%;
-                gap: 5rem;
+                flex: 0 0 42%;
+                
+                .leftText {
+                     gap: clamp(2rem, 6vw, 6rem);
+                }
             }
 
             .right {
-                width: 50%;
+                flex: 0 0 54%;
+                height: clamp(35rem, 60vh, 50rem);
             }
         }
     }
