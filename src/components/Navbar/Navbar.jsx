@@ -9,14 +9,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    console.log(isOpen)
+    setIsOpen(prev=> !prev);
   }
   return (
     <nav>
         <div className={styles.menu}>
           <div className={styles.logo}>
-            <img src={logo} alt="" />
+            <img src={logo} alt="realaeditor logo" />
           <a href="https://realaeeditor.netlify.app/"><h1>realaeditor</h1></a>
           </div>
         <div className={styles.menu_i}>

@@ -11,7 +11,7 @@ nav {
     border: 1px solid rgba(255, 255, 255, 0.08);
     
     padding: 1rem 1.2rem;
-    width: 95%;
+    width: min(95%, 75rem);
     border-radius: 2rem;   
 
     .menu {
@@ -100,6 +100,10 @@ nav {
                 outline: none;
                 border-radius: 5rem;
                 font-size: 1rem;
+
+                &:hover {
+                    opacity: 0.9;
+                }
             }
         }
     }

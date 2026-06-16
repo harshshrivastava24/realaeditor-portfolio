@@ -1,6 +1,6 @@
 // import React from 'react'
 import { useEffect, useState } from 'react'
-import styles from './Booking.module.css'
+import styles from './Booking.module.scss'
 import { RiInstagramLine, RiTwitterXLine } from '@remixicon/react';
 import Cal, { getCalApi } from '@calcom/embed-react';
 
