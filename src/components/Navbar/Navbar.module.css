@@ -64,6 +64,7 @@ nav .mobileList.open {
   max-height: 300px;
   transform: translateY(0);
   margin-top: 1.5rem;
+  pointer-events: auto;
 }
 nav .mobileList li {
   padding: 0.8rem 0;
