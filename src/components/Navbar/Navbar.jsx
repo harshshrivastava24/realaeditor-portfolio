@@ -28,16 +28,16 @@ const Navbar = () => {
           <ul className={`${styles.mobileList} ${isOpen ? styles.open : ''}`}>
           <li><a href="#projects" className={styles.links}>Projects</a></li>
           <li><a href="#services">Services</a></li>
-          <li>Process</li>
+          {/* <li>Process</li> */}
           <li><a href="#about">About</a></li>
-          <li><button>Book Call</button></li>
+          <li><a href='#book' className={styles.mobileBook}>Book Call</a></li>
         </ul>
         
 
         <ul className={styles.desktopList}>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#services">Services</a></li>
-          <li>Process</li>
+          {/* <li>Process</li> */}
           <li><a href="#about">About</a></li>
         </ul>
 

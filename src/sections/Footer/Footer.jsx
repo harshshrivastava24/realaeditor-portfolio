@@ -6,13 +6,13 @@ import { RiInstagramLine, RiTwitterXLine } from '@remixicon/react'
 
 const Footer = () => {
   return (
-    <section className={styles.footerSection}>
+    <footer className={styles.footerSection}>
         <div className={styles.branding}>
             <MainBg/>
            <div className={styles.brandingContent}>
              <div className={styles.logoName}>
                 <img src={logo} alt="" />
-                <h1>realaeeditor</h1>
+                <h1>realaeditor</h1>
             </div>
             <div className={styles.text}>
                 <p>Professional video editing for Youtube creators, podcasts, and short-form content.</p>
@@ -37,7 +37,7 @@ const Footer = () => {
             <p>&copy; 2026 realaeditor All rights reserved.</p>
             <p>Built By <span>Harsh</span></p>
         </div>
-    </section>
+    </footer>
   )
 }
 

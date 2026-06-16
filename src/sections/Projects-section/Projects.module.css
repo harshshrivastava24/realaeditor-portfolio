@@ -26,8 +26,20 @@
   transform: translateY(0);
 }
 .projectsSection .top h1 {
-  font-size: 1.8rem;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
   font-weight: 400;
+}
+.projectsSection .top .filters {
+  display: flex;
+  gap: 0.6rem;
+}
+.projectsSection .top .filters button {
+  padding: 0.2rem 0.4rem;
+  border: solid 1px grey;
+  outline: none;
+  background-color: #0d0d0d;
+  color: white;
+  border-radius: 1rem;
 }
 .projectsSection .projects {
   display: flex;

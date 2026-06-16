@@ -29,8 +29,21 @@
         }
 
         h1 {
-            font-size: 1.8rem;
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
             font-weight: 400;
+        }
+
+        .filters {
+            display: flex;
+            gap: 0.6rem;
+            button {
+                padding: 0.2rem 0.4rem;
+                border: solid 1px grey;
+                outline: none;
+                background-color: #0d0d0d;
+                color: white;
+                border-radius: 1rem;
+            }
         }
     }
 

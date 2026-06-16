@@ -76,13 +76,15 @@ nav .mobileList li a {
   text-decoration: none;
   color: white;
 }
-nav .mobileList li button {
+nav .mobileList li .mobileBook {
+  text-decoration: none;
   background-color: red;
   color: white;
-  padding: 1rem 1.5rem;
+  padding: 1rem;
   border: none;
   outline: none;
   border-radius: 5rem;
+  font-size: 1rem;
 }
 nav .desktopList {
   display: none;

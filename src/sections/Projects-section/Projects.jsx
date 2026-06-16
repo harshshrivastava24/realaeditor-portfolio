@@ -1,49 +1,100 @@
 // import React from 'react'
 import { useEffect, useState } from 'react'
+// import ReactPlayer from 'react-player'
 import styles from './Projects.module.scss'
 const Projects = () => {
-  const links = [
-    {
-      link: "https://www.pexels.com/download/video/38025179/"
-    },
-    {
-      link: "https://www.pexels.com/download/video/38025179/"
-    },
-    {
-      link: "https://www.pexels.com/download/video/38025179/"
-    },
-    {
-      link: "https://www.pexels.com/download/video/38025179/"
-    },
-    {
-      link: "https://www.pexels.com/download/video/30395754/"
-    },
-  ]
   const [isLoaded, setIsLoaded] = useState(false)
+  const [projects, setProjects] = useState([])
 
-  useEffect(()=> {
-      const timer = setTimeout(() => {
-        setIsLoaded(true)
-      }, 100);
-  
-      return () => clearTimeout(timer)
-    }, [])
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState();
+  const [filter, setFilter] = useState("all")
+
+  useEffect(() => {
+    const getProjects = async () => {
+      try {
+        const res = await fetch("https://sheetdb.io/api/v1/cz8coz0rwhpa1")
+        const data = await res.json()
+
+        setProjects(data);
+
+        setLoading(false)
+
+      } catch (err) {
+        console.log(err)
+
+        setError("Failed to load Projects")
+        setLoading(false);
+      }
+    }
+
+    getProjects()
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoaded(true)
+    }, 100);
+    return () => clearTimeout(timer)
+  }, [])
+
+  const filteredProjects = projects.filter((project) => {
+    return filter === "all" || project.Category === filter;
+  });
+
+
+  if (loading) {
+    return (
+      <section className={styles.projectsSection}>
+        <p>Loading Projects...</p>
+      </section>
+    )
+  }
+
+
+  if (error) {
+    return (
+      <section className={styles.projectsSection}>
+        <p>{error}</p>
+      </section>
+    )
+  }
 
   return (
     <section className={styles.projectsSection}>
-        <div className={styles.top}>
-            <div className={`${styles.head} ${isLoaded? styles.animated : ''}`}>Projects</div>
-            <h1>Selected Editing Work</h1>
+      <div className={styles.top}>
+        <div className={`${styles.head} ${isLoaded ? styles.animated : ''}`}>Projects</div>
+        <h1>Selected Editing Work</h1>
+
+        <div className={styles.filters}>
+          <button onClick={() => setFilter("all")}>
+            All
+          </button>
+
+          <button onClick={() => setFilter("Shorts")}>
+            Short Form
+          </button>
+
+          <button onClick={() => setFilter("long-form")}>
+            Long Form
+          </button>
         </div>
-        <div className={styles.projects}>
-            {links.map((elem, index)=> {
-              return (
-                <div className={styles.videoContainer} key={index}>
-              <video autoPlay muted loop playsInline src={elem.link}></video>
+      </div>
+      <div className={styles.projects}>
+        {filteredProjects.map((project) => {
+          return (
+            <div key={project.Url} className={styles.videoContainer}>
+              <video
+                src={project.Url}
+                muted
+                loop
+                playsInline
+                preload='metadata'
+              />
             </div>
-              )
-            })}
-        </div>
+          )
+        })}
+      </div>
     </section>
   )
 }
