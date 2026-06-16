@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 // import ReactPlayer from 'react-player'
 import styles from './Projects.module.scss'
+import VideoCard from '../../components/VideoCard/VideoCard'
 const Projects = () => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [projects, setProjects] = useState([])
@@ -84,13 +85,7 @@ const Projects = () => {
         {filteredProjects.map((project) => {
           return (
             <div key={project.Url} className={styles.videoContainer}>
-              <video
-                src={project.Url}
-                muted
-                loop
-                playsInline
-                preload='metadata'
-              />
+              <VideoCard src = {project.Url}/>
             </div>
           )
         })}
