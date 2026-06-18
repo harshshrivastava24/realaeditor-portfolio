@@ -50,8 +50,8 @@ const Booking = () => {
                         <div className={styles.socials}>
                             <h3>Follow me on</h3>
                             <div className={styles.icons}>
-                                <a href="#" className={styles.icon}><RiInstagramLine className={styles.btns} /></a>
-                                <a href="#" className={styles.icon}><RiTwitterXLine className={styles.btns} /></a>
+                                <a href="#" aria-label='Instagram' className={styles.icon}><RiInstagramLine className={styles.btns} /></a>
+                                <a href="#" aria-label='X' className={styles.icon}><RiTwitterXLine className={styles.btns} /></a>
                             </div>
                         </div>
                     </div>

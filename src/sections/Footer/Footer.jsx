@@ -22,13 +22,13 @@ const Footer = () => {
                 <ul>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li>Process</li>
+                    {/* <li>Process</li> */}
                     <li><a href="#about">About</a></li>
                 </ul>
             </div>
             <div className={styles.socials}>
-                <a href="#" className={styles.icon}><RiInstagramLine className={styles.btns}/></a>
-                <a href="#" className={styles.icon}><RiTwitterXLine className={styles.btns}/></a>
+                <a href="#" aria-label='Instagram' className={styles.icon}><RiInstagramLine className={styles.btns}/></a>
+                <a href="#" aria-label='X' className={styles.icon}><RiTwitterXLine className={styles.btns}/></a>
             </div>
            </div>
         </div>
