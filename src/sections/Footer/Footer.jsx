@@ -27,8 +27,8 @@ const Footer = () => {
                 </ul>
             </div>
             <div className={styles.socials}>
-                <a href="#" aria-label='Instagram' className={styles.icon}><RiInstagramLine className={styles.btns}/></a>
-                <a href="#" aria-label='X' className={styles.icon}><RiTwitterXLine className={styles.btns}/></a>
+                <a href="#" className={styles.icon}><RiInstagramLine className={styles.btns}/></a>
+                <a href="#" className={styles.icon}><RiTwitterXLine className={styles.btns}/></a>
             </div>
            </div>
         </div>

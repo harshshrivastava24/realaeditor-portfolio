@@ -19,7 +19,7 @@ const Navbar = () => {
           <a href="https://realaeeditor.netlify.app/"><h1>realaeditor</h1></a>
         </div>
         <div className={styles.menu_i}>
-          <button onClick={toggleMenu} aria-label={isOpen ? "Close menu" : "Open menu"}>
+          <button onClick={toggleMenu}>
             {isOpen ? <RiCloseLargeLine /> : <RiMenuLine />}
           </button>
         </div>
