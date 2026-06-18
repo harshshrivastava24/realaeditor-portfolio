@@ -2,7 +2,7 @@
 import { RiCloseLargeLine, RiMenuLine } from '@remixicon/react'
 import styles from'./Navbar.module.scss'
 import { useState } from 'react'
-import logo from '../../assets/logo.PNG'
+import logo from '../../assets/logo.webp'
 
 const Navbar = () => {
 

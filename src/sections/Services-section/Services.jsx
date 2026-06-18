@@ -1,6 +1,7 @@
 // import React from 'react'
 import { useEffect, useState } from 'react';
 import styles from './Services.module.scss'
+import VideoCard from '../../components/VideoCard/VideoCard'
 
 const Services = () => {
   const [sliderPosition, setSliderPosition] = useState(50);
@@ -23,7 +24,7 @@ const Services = () => {
       </div>
       <div className={styles.cards}>
         <div className={styles.card}>
-          <video autoPlay muted loop playsInline src="https://www.pexels.com/download/video/35769389/" ></video>
+          <VideoCard src = "https://www.pexels.com/download/video/35769389/"/>
           <div className={styles.title}>
             <h2>Sound Design</h2>
           </div>
@@ -62,7 +63,7 @@ const Services = () => {
           </div>
         </div>
         <div className={styles.card}>
-          <video autoPlay muted loop playsInline src="https://www.pexels.com/download/video/35769389/" ></video>
+          <VideoCard src = "https://www.pexels.com/download/video/35769389/"/>
           <div className={styles.title}>
             <h2>Sound Design</h2>
           </div>

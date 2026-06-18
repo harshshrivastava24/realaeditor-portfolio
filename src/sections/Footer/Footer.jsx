@@ -1,7 +1,7 @@
 // import React from 'react'
 import MainBg from '../../components/MainBG/MainBg'
 import styles from './Footer.module.scss'
-import logo from '../../assets/logo.PNG'
+import logo from '../../assets/logo.webp'
 import { RiInstagramLine, RiTwitterXLine } from '@remixicon/react'
 
 const Footer = () => {
@@ -11,7 +11,7 @@ const Footer = () => {
             <MainBg/>
            <div className={styles.brandingContent}>
              <div className={styles.logoName}>
-                <img src={logo} alt="" />
+                <img src={logo} alt="realaeditor logo" />
                 <h1>realaeditor</h1>
             </div>
             <div className={styles.text}>
