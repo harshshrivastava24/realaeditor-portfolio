@@ -29,6 +29,7 @@ const VideoCard = ({src}) => {
         muted
         loop
         playsInline
+        controls
         preload="metadata"
       />
     </div>
