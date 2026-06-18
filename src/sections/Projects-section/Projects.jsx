@@ -11,6 +11,8 @@ const Projects = () => {
   const [error, setError] = useState();
   const [filter, setFilter] = useState("all")
 
+
+
   useEffect(() => {
     const getProjects = async () => {
       try {
@@ -38,6 +40,16 @@ const Projects = () => {
     }, 100);
     return () => clearTimeout(timer)
   }, [])
+
+
+  const getYoutubeId = (url) => {
+  const regExp =
+    /(?:youtube\.com\/(?:watch\?v=|shorts\/)|youtu\.be\/)([^&?/]+)/;
+
+  const match = url.match(regExp);
+
+  return match ? match[1] : null;
+};
 
   const filteredProjects = projects.filter((project) => {
     return filter === "all" || project.Category === filter;
@@ -86,16 +98,24 @@ const Projects = () => {
           return (
             <div key={project.Url} className={styles.videoContainer}>
               {/* <VideoCard src = {project.Url}/> */}
-              <ReactPlayer
+              {/* <ReactPlayer
                 src={project.Url}
+                playing
+                muted
+                loop
                 controls
-                light
+                playsInline
                 width="100%"
                 height="100%"
-                playing= {true}
-                muted = {true}
-                loop = {true}
-              />
+              /> */}
+
+              <iframe
+        src={`https://www.youtube.com/embed/${getYoutubeId(project.Url)}?autoplay=1&mute=1&loop=1&playlist=${getYoutubeId(project.Url)}&modestbranding=1&rel=0`}
+        title={project.Title}
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+      />
+    
             </div>
           )
         })}
