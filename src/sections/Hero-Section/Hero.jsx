@@ -23,8 +23,8 @@ const Hero = () => {
         </div>
 
         <div className={`${styles.btns} ${isLoaded? styles.animated: ''}`}>
-          <button className={styles.red}>View Work</button>
-          <button className={styles.plain}>See Pricing</button>
+          <button className={styles.red}><a href="#projects">View Work</a></button>
+          <button className={styles.plain}><a href="#about">About Me</a></button>
         </div>
         </div>
 

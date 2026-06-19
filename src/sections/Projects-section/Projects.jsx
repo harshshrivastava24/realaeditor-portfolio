@@ -1,7 +1,8 @@
 // import React from 'react'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import ReactPlayer from 'react-player'
 import styles from './Projects.module.scss'
+import { RiArrowRightLine } from '@remixicon/react'
 // import VideoCard from '../../components/VideoCard/VideoCard'
 const Projects = () => {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -11,7 +12,14 @@ const Projects = () => {
   const [error, setError] = useState();
   const [filter, setFilter] = useState("all")
 
+  const carouselRef = useRef(null)
 
+ const scrollNext = () => {
+    carouselRef.current?.scrollBy({
+      left: 300,
+      behavior: "smooth",
+    });
+  };
 
   useEffect(() => {
     const getProjects = async () => {
@@ -41,15 +49,6 @@ const Projects = () => {
     return () => clearTimeout(timer)
   }, [])
 
-
-  const getYoutubeId = (url) => {
-  const regExp =
-    /(?:youtube\.com\/(?:watch\?v=|shorts\/)|youtu\.be\/)([^&?/]+)/;
-
-  const match = url.match(regExp);
-
-  return match ? match[1] : null;
-};
 
   const filteredProjects = projects.filter((project) => {
     return filter === "all" || project.Category === filter;
@@ -93,12 +92,11 @@ const Projects = () => {
           </button>
         </div>
       </div>
-      <div className={styles.projects}>
+      <div ref={carouselRef} className={styles.projects}>
         {filteredProjects.map((project) => {
           return (
             <div key={project.Url} className={styles.videoContainer}>
-              {/* <VideoCard src = {project.Url}/> */}
-              {/* <ReactPlayer
+              <ReactPlayer
                 src={project.Url}
                 playing
                 muted
@@ -107,18 +105,14 @@ const Projects = () => {
                 playsInline
                 width="100%"
                 height="100%"
-              /> */}
-
-              <iframe
-        src={`https://www.youtube.com/embed/${getYoutubeId(project.Url)}?autoplay=1&mute=1&loop=1&playlist=${getYoutubeId(project.Url)}&modestbranding=1&rel=0`}
-        title={project.Title}
-        allow="autoplay; encrypted-media"
-        allowFullScreen
-      />
-    
+              />
             </div>
           )
         })}
+      </div>
+      <div className={styles.swipeBtn}
+      onClick={scrollNext}>
+        <RiArrowRightLine/>
       </div>
     </section>
   )

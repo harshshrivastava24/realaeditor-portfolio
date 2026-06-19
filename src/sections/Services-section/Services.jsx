@@ -1,7 +1,6 @@
 // import React from 'react'
 import { useEffect, useState } from 'react';
 import styles from './Services.module.scss'
-import VideoCard from '../../components/VideoCard/VideoCard'
 
 const Services = () => {
   const [sliderPosition, setSliderPosition] = useState(50);
@@ -24,7 +23,7 @@ const Services = () => {
       </div>
       <div className={styles.cards}>
         <div className={styles.card}>
-          <VideoCard src = "https://www.pexels.com/download/video/35769389/"/>
+          <img src="https://images.unsplash.com/photo-1780789593654-8cc7e8e747ef?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="err" />
           <div className={styles.title}>
             <h2>Sound Design</h2>
           </div>
@@ -63,7 +62,7 @@ const Services = () => {
           </div>
         </div>
         <div className={styles.card}>
-          <VideoCard src = "https://www.pexels.com/download/video/35769389/"/>
+          <img src="https://images.unsplash.com/photo-1780789593654-8cc7e8e747ef?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="err" />
           <div className={styles.title}>
             <h2>Sound Design</h2>
           </div>
