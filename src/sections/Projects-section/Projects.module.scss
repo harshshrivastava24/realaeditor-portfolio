@@ -5,6 +5,8 @@
     align-items: center;
     gap: 2rem;
     padding: 2rem 3rem;
+    width: 100%;
+    overflow: hidden;
 
     .top {
          display: flex;
@@ -69,11 +71,20 @@
         }
 
         .videoContainer {
+            position: relative;
             flex: 0 0 80%;
             aspect-ratio: 9/16;
             border-radius: 1rem;
             contain: content;
-            scroll-snap-align: start;
+            scroll-snap-align: center;
+
+            >div {
+                position: absolute !important;
+                top: 0;
+                left: 0;
+                width: 100% !important;
+                height: 100% !important;
+            }
             
             video {
                 width: 100%;
@@ -82,12 +93,6 @@
                 display: block;
                 backface-visibility: hidden;
             }
-
-            // iframe {
-            //     height: 100%;
-            //     width: 100%;
-            //     border: none;
-            // }
         }
     }
 
@@ -135,9 +140,10 @@
         padding: 5rem 12rem;
         .projects {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            overflow: visible;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 2rem;
+          overflow: visible;
+          justify-content: center;
 
           .videoContainer {
             flex: unset;

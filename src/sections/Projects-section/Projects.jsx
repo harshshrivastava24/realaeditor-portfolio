@@ -1,9 +1,9 @@
 // import React from 'react'
 import { useEffect, useRef, useState } from 'react'
-import ReactPlayer from 'react-player'
+// import ReactPlayer from 'react-player'
 import styles from './Projects.module.scss'
 import { RiArrowRightLine } from '@remixicon/react'
-// import VideoCard from '../../components/VideoCard/VideoCard'
+import VideoCard from '../../components/VideoCard/VideoCard'
 const Projects = () => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [projects, setProjects] = useState([])
@@ -95,18 +95,19 @@ const Projects = () => {
       <div ref={carouselRef} className={styles.projects}>
         {filteredProjects.map((project) => {
           return (
-            <div key={project.Url} className={styles.videoContainer}>
-              <ReactPlayer
-                src={project.Url}
-                playing
-                muted
-                loop
-                controls
-                playsInline
-                width="100%"
-                height="100%"
-              />
-            </div>
+            // <div key={project.Url} className={styles.videoContainer}>
+            //   <ReactPlayer
+            //     src={project.Url}
+            //     playing
+            //     muted
+            //     loop
+            //     controls
+            //     playsInline
+            //     width="100%"
+            //     height="100%"
+            //   />
+            // </div>
+            <VideoCard key={project.Url} project = {project}/>
           )
         })}
       </div>

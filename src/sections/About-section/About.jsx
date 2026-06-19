@@ -1,5 +1,5 @@
 // import React from 'react'
-import { RiInstagramLine, RiTwitterXLine } from '@remixicon/react'
+import { RiInstagramLine} from '@remixicon/react'
 import styles from './About.module.scss'
 const About = () => {
   return (
@@ -18,7 +18,6 @@ const About = () => {
 
       <div className={styles.socials}>
         <RiInstagramLine/>
-        <RiTwitterXLine/>
       </div>
       </div>
       <div className={styles.profilePic}>

@@ -1,7 +1,7 @@
 // import React from 'react'
 import { useEffect, useState } from 'react'
 import styles from './Booking.module.scss'
-import { RiInstagramLine, RiTwitterXLine } from '@remixicon/react';
+import { RiInstagramLine} from '@remixicon/react';
 import Cal, { getCalApi } from '@calcom/embed-react';
 
 
@@ -51,7 +51,6 @@ const Booking = () => {
                             <h3>Follow me on</h3>
                             <div className={styles.icons}>
                                 <a href="#" aria-label='Instagram' className={styles.icon}><RiInstagramLine className={styles.btns} /></a>
-                                <a href="#" aria-label='X' className={styles.icon}><RiTwitterXLine className={styles.btns} /></a>
                             </div>
                         </div>
                     </div>

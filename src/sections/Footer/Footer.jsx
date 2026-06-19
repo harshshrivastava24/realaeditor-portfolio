@@ -2,7 +2,7 @@
 import MainBg from '../../components/MainBG/MainBg'
 import styles from './Footer.module.scss'
 import logo from '../../assets/logo.webp'
-import { RiInstagramLine, RiTwitterXLine } from '@remixicon/react'
+import { RiInstagramLine} from '@remixicon/react'
 
 const Footer = () => {
   return (
@@ -28,14 +28,13 @@ const Footer = () => {
             </div>
             <div className={styles.socials}>
                 <a href="#" className={styles.icon}><RiInstagramLine className={styles.btns}/></a>
-                <a href="#" className={styles.icon}><RiTwitterXLine className={styles.btns}/></a>
             </div>
            </div>
         </div>
 
         <div className={styles.copyright}>
             <p>&copy; 2026 realaeditor All rights reserved.</p>
-            <p>Built By <span>Harsh</span></p>
+            <p>Built By <span>Harsh Shrivastava</span></p>
         </div>
     </footer>
   )
