@@ -63,8 +63,9 @@
         display: flex;
         overflow-x: auto;
         gap: 1rem;
+        min-width: 0;
         width: 100%;
-        scroll-snap-type: x mandatory;
+        scroll-snap-type: x proximity;
         
         &::-webkit-scrollbar {
             display: none;
@@ -72,16 +73,24 @@
 
         .videoContainer {
             position: relative;
-            flex: 0 0 75%;
+            // flex: 0 0 75%;
+            width: 75vw;
+            flex-shrink: 0;
             aspect-ratio: 9/16;
             border-radius: 1rem;
-            contain: content;
+            // contain: content;
+            // overflow: hidden;
             scroll-snap-align: center;
 
-            >div {
-                position: absolute !important;
-                top: 0;
-                left: 0;
+            // >div {
+            //     position: absolute !important;
+            //     top: 0;
+            //     left: 0;
+            //     width: 100% !important;
+            //     height: 100% !important;
+            // }
+
+            iframe {
                 width: 100% !important;
                 height: 100% !important;
             }
