@@ -62,7 +62,7 @@
     .projects {
         display: flex;
         overflow-x: auto;
-        gap: 1rem;
+        gap: 1.5rem;
         min-width: 0;
         width: 100%;
         scroll-snap-type: x proximity;
@@ -73,13 +73,11 @@
 
         .videoContainer {
             position: relative;
-            // flex: 0 0 75%;
-            width: 75vw;
-            flex-shrink: 0;
+            flex: 0 0 75%;
             aspect-ratio: 9/16;
             border-radius: 1rem;
-            // contain: content;
-            // overflow: hidden;
+            contain: content;
+            border: 2px solid red;
             scroll-snap-align: center;
 
             // >div {
