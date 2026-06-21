@@ -64,14 +64,9 @@
 
                 .icon {
                     color: white;
-                    padding: 0.6rem;
+                    padding: 0.5rem 0.6rem;
                     background-color: var(--accent-red);
                     border-radius: 50%;
-
-                    .btns {
-                        height: 1.5rem;
-                        width: 1.5rem;
-                    }
                 }
             }
         }
@@ -98,10 +93,22 @@
 @media (min-width:800px) {
     .footerSection {
         .branding {
-            .text {
-                p {
-                    max-width: 30ch;
+            .brandingContent {
+                .text {
+                    p {
+                        max-width: 30ch;
+                    }
                 }
+
+                .socials {
+                    .icon {
+                        svg {
+                            height: 2rem;
+                            width: 2rem;
+                        }
+                    }
+                }
+
             }
         }
 

@@ -17,6 +17,7 @@
         border-top: 2px solid grey;
         border-radius: 2rem;
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+
         .left {
             @include flexCol(1rem);
 
@@ -78,10 +79,10 @@
                 .icons {
                     display: flex;
                     gap: 0.5rem;
-                    a {
+                    .icon {
                         color: white;
                         background-color: var(--accent-red);
-                        padding: 0.5rem;
+                        padding: 0.5rem 0.6rem;
                         border-radius: 50%;
                     }
                 }
@@ -112,6 +113,17 @@
                 
                 .leftText {
                      gap: clamp(2rem, 6vw, 6rem);
+
+                     .socials {
+                        .icons {
+                            .icon {
+                                svg {
+                            width: 2rem;
+                            height: 2rem;
+                        }
+                            }
+                        }
+                     }
                 }
             }
 

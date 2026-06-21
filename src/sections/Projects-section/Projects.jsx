@@ -14,11 +14,31 @@ const Projects = () => {
 
   const carouselRef = useRef(null)
 
- const scrollNext = () => {
-    carouselRef.current?.scrollBy({
-      left: 300,
-      behavior: "smooth",
-    });
+//  const scrollNext = () => {
+//     carouselRef.current?.scrollBy({
+//       left: 300,
+//       behavior: "smooth",
+//     });
+//   };
+
+const scrollNext = () => {
+    if (carouselRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
+
+      const isAtEnd = Math.ceil(scrollLeft + clientWidth) >= scrollWidth;
+
+      if (isAtEnd) {
+        carouselRef.current.scrollTo({
+          left: 0,
+          behavior: "smooth",
+        });
+      } else {
+        carouselRef.current.scrollBy({
+          left: clientWidth, 
+          behavior: "smooth",
+        });
+      }
+    }
   };
 
   useEffect(() => {

@@ -65,7 +65,8 @@
         gap: 1.5rem;
         min-width: 0;
         width: 100%;
-        scroll-snap-type: x proximity;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
         
         &::-webkit-scrollbar {
             display: none;
@@ -79,6 +80,7 @@
             contain: content;
             border: 2px solid red;
             scroll-snap-align: center;
+            scroll-snap-stop: always;
 
             // >div {
             //     position: absolute !important;
