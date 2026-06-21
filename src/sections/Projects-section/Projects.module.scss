@@ -74,11 +74,11 @@
 
         .videoContainer {
             position: relative;
-            flex: 0 0 75%;
+            flex: 0 0 100%;
             aspect-ratio: 9/16;
             border-radius: 1rem;
             contain: content;
-            border: 2px solid red;
+            // border: 2px solid red;
             scroll-snap-align: center;
             scroll-snap-stop: always;
 
