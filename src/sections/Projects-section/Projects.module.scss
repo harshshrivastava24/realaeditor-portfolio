@@ -66,6 +66,7 @@
         min-width: 0;
         width: 100%;
         scroll-snap-type: x mandatory;
+        scroll-padding-left: 0;
         scroll-behavior: smooth;
         
         &::-webkit-scrollbar {
@@ -75,11 +76,12 @@
         .videoContainer {
             position: relative;
             flex: 0 0 100%;
+            width: 100%;
             aspect-ratio: 9/16;
             border-radius: 1rem;
             contain: content;
             // border: 2px solid red;
-            scroll-snap-align: center;
+            scroll-snap-align: start;
             scroll-snap-stop: always;
 
             // >div {

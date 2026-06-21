@@ -25,6 +25,8 @@ const scrollNext = () => {
     if (carouselRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
 
+      const gapInpx = 24
+
       const isAtEnd = Math.ceil(scrollLeft + clientWidth) >= scrollWidth;
 
       if (isAtEnd) {
@@ -34,7 +36,7 @@ const scrollNext = () => {
         });
       } else {
         carouselRef.current.scrollBy({
-          left: clientWidth, 
+          left: clientWidth + gapInpx, 
           behavior: "smooth",
         });
       }
