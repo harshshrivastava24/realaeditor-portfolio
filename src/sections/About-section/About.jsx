@@ -20,7 +20,7 @@ const About = () => {
         </div>
 
         <div className={styles.socials}>
-          <a href="https://www.instagram.com/realaeditor">
+          <a href="https://www.instagram.com/realaeditor" target='_blank'>
             <RiInstagramLine />
           </a>
         </div>

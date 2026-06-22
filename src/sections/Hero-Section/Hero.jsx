@@ -31,7 +31,8 @@ const Hero = () => {
         </div>
 
         <div className={styles.video}>
-          <video autoPlay muted loop controls playsInline src="https://framerusercontent.com/assets/t1Ti4gmACJzDwYuleC4XbdPL0.mp4"></video>
+          {/* <video autoPlay muted loop controls playsInline src="https://framerusercontent.com/assets/t1Ti4gmACJzDwYuleC4XbdPL0.mp4"></video> */}
+          <img src="https://res.cloudinary.com/dqxh1dda4/image/upload/f_auto,q_auto/v1782153481/EDITOR_..-4_balwlq.png" alt="" />
         </div>
     </section>
   )

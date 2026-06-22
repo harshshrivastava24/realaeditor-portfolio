@@ -27,7 +27,7 @@ const Footer = () => {
                 </ul>
             </div>
             <div className={styles.socials}>
-                <a href="https://www.instagram.com/realaeditor" className={styles.icon}><RiInstagramLine className={styles.btns}/></a>
+                <a href="https://www.instagram.com/realaeditor" target='_blank' className={styles.icon}><RiInstagramLine className={styles.btns}/></a>
             </div>
            </div>
         </div>
