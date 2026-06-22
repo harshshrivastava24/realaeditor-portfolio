@@ -14,22 +14,24 @@ import Booking from './sections/Booking/Booking.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    
-      <Navbar/>
-    <Hero id ="hero"/>
-    <MouseFollow/>
-    <section id = "projects">
-      <Projects/>
+
+    <Navbar />
+    <section id="hero">
+      <Hero />
     </section>
-    <section id ="services">
-      <Services/>
+    <MouseFollow />
+    <section id="projects">
+      <Projects />
     </section>
-    <section id ="about">
+    <section id="services">
+      <Services />
+    </section>
+    <section id="about">
       <About />
     </section>
-    <section id = "book">
-      <Booking/>
+    <section id="book">
+      <Booking />
     </section>
-    <Footer/>
+    <Footer />
   </StrictMode>,
 )
