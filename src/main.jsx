@@ -18,11 +18,11 @@ createRoot(document.getElementById('root')).render(
       <Navbar/>
     <Hero id = "hero"/>
     <MouseFollow/>
-    <section id ="services">
-      <Services/>
-    </section>
     <section id = "projects">
       <Projects/>
+    </section>
+    <section id ="services">
+      <Services/>
     </section>
     <section id ="about">
       <About />
