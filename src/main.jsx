@@ -16,7 +16,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     
       <Navbar/>
-    <Hero/>
+    <Hero id = "hero"/>
     <MouseFollow/>
     <section id ="services">
       <Services/>

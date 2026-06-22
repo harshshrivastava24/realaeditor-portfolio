@@ -18,8 +18,10 @@ const Hero = () => {
       <MainBg/>
         <div className={styles.left}>
           <div className={`${styles.text} ${isLoaded? styles.animated: ''}`} >
-            <h1>Raw Footage Made Cinematic.</h1>
-            <p>High-end editing and sound design built to capture attention instantly, maximize viewer retention, and transform passive viewers into dedicated subscribers.</p>
+            {/* <h1>Raw Footage Made Cinematic.</h1> */}
+            <h1>Editing videos that boosts sales</h1>
+            {/* <p>High-end editing and sound design built to capture attention instantly, maximize viewer retention, and transform passive viewers into dedicated subscribers.</p> */}
+            <p>Professional video editing, motion graphics, and sound design crafted to capture attention, increase retention, and transform ideas into engaging visual stories that audiences remember.</p>
         </div>
 
         <div className={`${styles.btns} ${isLoaded? styles.animated: ''}`}>

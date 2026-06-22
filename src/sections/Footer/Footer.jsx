@@ -15,7 +15,7 @@ const Footer = () => {
                 <h1>realaeditor</h1>
             </div>
             <div className={styles.text}>
-                <p>Professional video editing for Youtube creators, podcasts, and short-form content.</p>
+                <p>Professional video editing, motion design, and sound design for creators, brands, and businesses.</p>
             </div>
 
             <div className={styles.links}>
@@ -27,7 +27,7 @@ const Footer = () => {
                 </ul>
             </div>
             <div className={styles.socials}>
-                <a href="#" className={styles.icon}><RiInstagramLine className={styles.btns}/></a>
+                <a href="https://www.instagram.com/realaeditor" className={styles.icon}><RiInstagramLine className={styles.btns}/></a>
             </div>
            </div>
         </div>

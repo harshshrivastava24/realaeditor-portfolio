@@ -23,12 +23,12 @@ const Services = () => {
       </div>
       <div className={styles.cards}>
         <div className={styles.card}>
-          <img src="https://images.unsplash.com/photo-1780789593654-8cc7e8e747ef?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="err" />
+          <img src="https://res.cloudinary.com/dqxh1dda4/image/upload/f_auto,q_auto/v1782130139/Motion_Graphics_kcddk9.jpg" alt="err" />
           <div className={styles.title}>
-            <h2>Sound Design</h2>
+            <h2>Motion Graphics</h2>
           </div>
           <div className={styles.text}>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Dynamic text animations, transitions, and visual effects designed to elevate storytelling and keep viewers engaged</p>
           </div>
         </div>
         <div className={styles.card}>
@@ -58,16 +58,16 @@ const Services = () => {
             <h2>Color Grading</h2>
           </div>
           <div className={styles.text}>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Refining colors and contrast to create a cinematic look that enhances your brand and story.</p>
           </div>
         </div>
         <div className={styles.card}>
-          <img src="https://images.unsplash.com/photo-1780789593654-8cc7e8e747ef?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="err" />
+          <img src="https://res.cloudinary.com/dqxh1dda4/image/upload/f_auto,q_auto/v1782130140/Sound_Design1_idi6vl.jpg" alt="err" />
           <div className={styles.title}>
             <h2>Sound Design</h2>
           </div>
           <div className={styles.text}>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Crafting immersive audio experiences that add depth, emotion, and impact to every frame.</p>
           </div>
         </div>
 

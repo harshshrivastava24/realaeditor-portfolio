@@ -109,26 +109,17 @@ const scrollNext = () => {
             Short Form
           </button>
 
-          <button onClick={() => setFilter("long-form")}>
+          <button onClick={() => setFilter("long")}>
             Long Form
+          </button>
+          <button onClick={() => setFilter("Saas")}>
+            Saas
           </button>
         </div>
       </div>
       <div ref={carouselRef} className={styles.projects}>
         {filteredProjects.map((project) => {
           return (
-            // <div key={project.Url} className={styles.videoContainer}>
-            //   <ReactPlayer
-            //     src={project.Url}
-            //     playing
-            //     muted
-            //     loop
-            //     controls
-            //     playsInline
-            //     width="100%"
-            //     height="100%"
-            //   />
-            // </div>
             <VideoCard key={project.Url} project = {project}/>
           )
         })}

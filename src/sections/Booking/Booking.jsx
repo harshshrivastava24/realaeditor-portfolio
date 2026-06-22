@@ -44,20 +44,20 @@ const Booking = () => {
                         </div>
                         <div className={styles.mail}>
                             <h3>Email</h3>
-                            <p>realaedits@gmail.com</p>
+                            <p>realaeditor@gmail.com</p>
                         </div>
 
                         <div className={styles.socials}>
                             <h3>Follow me on</h3>
                             <div className={styles.icons}>
-                                <a href="#" aria-label='Instagram' className={styles.icon}><RiInstagramLine className={styles.btns} /></a>
+                                <a href="https://www.instagram.com/realaeditor" aria-label='Instagram' className={styles.icon}><RiInstagramLine className={styles.btns} /></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className={styles.right}>
                     <Cal
-                        calLink="temp-acc/30min"
+                        calLink="real-aeditor-vlbcy7/15min"
                         style={{
                             width: "100%",
                             height: "100%",

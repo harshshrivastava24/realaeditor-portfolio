@@ -24,34 +24,46 @@
             flex-direction: column;
             align-items: center;
             gap: 1.5rem;
-    
-            h2 {
-                font-weight: 400;
+
+            .name {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 1rem;
+                img {
+                    height: 3rem;
+                    width: 3rem;
+                    border-radius: 1rem;
+                    object-fit: cover;
+                    object-position: top;
+                }
+
+                h2 {
+                    font-weight: 400;
+                }
+
             }
+    
     
             p {
                 width: 100%;
-                max-width: 55ch;
+                min-width: 30ch;
             }
         }
 
         .socials {
             display: flex;
             gap: 1rem;
+            a {
+                text-decoration: none;
+                color: white;
+            }
         }
     }
 
     .profilePic {
-        height: 100%;
-        width: 100%;
-
-        img {
-            height: 90%;
-            width: 90%;
-            object-fit: cover;
-            border-radius: 1rem;
-
-        }
+        display: none;  
     }
 }
 
@@ -59,13 +71,13 @@
     .aboutSection {
         padding: 5rem 12rem;
         flex-direction: row-reverse;
-        gap: 4rem;
-        justify-content: center;
+        gap: 3rem;
 
         .aboutContainer{
             width: 60%;
             align-items: flex-start;
             flex-shrink: 1;
+            gap: 3rem;
 
             .head {
                 h1 {
@@ -74,11 +86,15 @@
             }
             
             .about {
-                justify-content: flex-start;
-                align-items: flex-start;
+               
                 
-                h2 {
-                    font-size: 2rem;
+                .name {
+                    img {
+                        display: none;
+                    }
+                    h2 {
+                        font-size: 2rem;
+                    }
                 }
 
                 p{
@@ -96,9 +112,20 @@
         }
 
         .profilePic {
+            display: initial;
             width: 40%;
             min-width: 320px;
             flex-shrink: 1;
+            aspect-ratio: 4/4;
+
+            img {
+            height: 90%;
+            width: 90%;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 1rem;
+
+        }
            
         }
     }

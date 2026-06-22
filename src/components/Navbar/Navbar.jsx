@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className={styles.menu}>
         <div className={styles.logo}>
           <img src={logo} alt="realaeditor logo" />
-          <a href="https://realaeeditor.netlify.app/"><h1>realaeditor</h1></a>
+          <a href="#hero"><h1>realaeditor</h1></a>
         </div>
         <div className={styles.menu_i}>
           <button onClick={toggleMenu}>
