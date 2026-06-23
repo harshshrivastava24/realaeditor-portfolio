@@ -14,13 +14,6 @@ const Projects = () => {
 
   const carouselRef = useRef(null)
 
-//  const scrollNext = () => {
-//     carouselRef.current?.scrollBy({
-//       left: 300,
-//       behavior: "smooth",
-//     });
-//   };
-
 const scrollNext = () => {
     if (carouselRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
@@ -46,7 +39,13 @@ const scrollNext = () => {
   useEffect(() => {
     const getProjects = async () => {
       try {
-        const res = await fetch("https://sheetdb.io/api/v1/cz8coz0rwhpa1")
+
+        const scriptUrl = "https://script.google.com/macros/s/AKfycbzVR2r-H36e9KWu-f_s6fuAwQSahz_2hjKVAi-_hzUOCvkoeJXRvOvSCSFBwsIrR1Hu/exec"
+
+        const res = await fetch(scriptUrl, {
+          method: "GET",
+          redirect: "follow"
+        })
         const data = await res.json()
 
         setProjects(data);
