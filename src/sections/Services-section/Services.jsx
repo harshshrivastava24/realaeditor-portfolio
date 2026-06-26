@@ -43,13 +43,13 @@ const Services = () => {
               <div className={styles.handleBtn}><span>‹</span><span>›</span></div>
             </div>
 
-            {/* Layer 4: Invisible Input Ranger Control */}
+            {/*Invisible Input Ranger Control */}
             <input
               type="range"
               min="0"
               max="100"
               value={sliderPosition}
-              onChange={(e) => setSliderPosition(e.target.value)}
+              onInput={(e) => setSliderPosition(e.target.value)}
               className={styles.rangeInput}
             />
 

@@ -1,29 +1,27 @@
 import { useInView } from "react-intersection-observer";
 import ReactPlayer from 'react-player'
 import styles from '../../sections/Projects-section/Projects.module.scss'
+import { useState } from "react";
 
 
 const VideoCard = ({project}) => {
     
+    const [hasLoaded, setHasLoaded] = useState(false)
 
     const {ref, inView} = useInView({
         threshold: 0.5,
+
+        onChange : (inViewStatus) => {
+          if(inViewStatus && !hasLoaded) {
+            setHasLoaded(true)
+          }
+        }
     })
-
-    // useEffect(()=> {
-    //     if(!videoRef.current) return;
-
-    //     if(inView) {
-    //         videoRef.current.play().catch(()=> {})
-    //     }
-    //     else {
-    //         videoRef.current.pause()
-    //     }
-    // },[inView])
 
   return (
     <div ref={ref} className={styles.videoContainer}>
-      <ReactPlayer
+      {hasLoaded ? (
+        <ReactPlayer
       src={project.Url}
       playing= {inView}
       muted = {true}
@@ -33,6 +31,9 @@ const VideoCard = ({project}) => {
       width="100%"
       height="100%"
       />
+      ) : (
+        <div style={{width: '100%', height: '100%', backgroundColor: '#121212'}}></div>
+      )}
     </div>
   )
 }

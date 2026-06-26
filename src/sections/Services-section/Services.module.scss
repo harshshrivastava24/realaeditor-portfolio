@@ -77,7 +77,6 @@
                 overflow: hidden;
 
                 position: relative;
-                // user-select: none;
 
                 .afterImg {
                     display: block;
@@ -145,10 +144,12 @@
                     appearance: none;
                     background: transparent;
 
+                    touch-action: pan-y;
+
                     &::-webkit-slider-thumb {
                          -webkit-appearance: none;
                          height: 100%;
-                         width: 40px; 
+                         width: 50px; 
                          background: transparent;
                          cursor: ew-resize;
                       }

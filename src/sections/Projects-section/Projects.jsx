@@ -12,9 +12,11 @@ const Projects = () => {
   const [error, setError] = useState();
   const [filter, setFilter] = useState("all")
 
+  const [showall, setShowAll] = useState(false)
+
   const carouselRef = useRef(null)
 
-const scrollNext = () => {
+  const scrollNext = () => {
     if (carouselRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
 
@@ -29,7 +31,7 @@ const scrollNext = () => {
         });
       } else {
         carouselRef.current.scrollBy({
-          left: clientWidth + gapInpx, 
+          left: clientWidth + gapInpx,
           behavior: "smooth",
         });
       }
@@ -38,8 +40,13 @@ const scrollNext = () => {
 
   useEffect(() => {
     const getProjects = async () => {
-      try {
+      const cachedData = sessionStorage.getItem("portfolio_projects")
 
+      if (cachedData) {
+        setProjects(JSON.parse(cachedData));
+        setLoading(false)
+      }
+      try {
         const scriptUrl = "https://script.google.com/macros/s/AKfycbzVR2r-H36e9KWu-f_s6fuAwQSahz_2hjKVAi-_hzUOCvkoeJXRvOvSCSFBwsIrR1Hu/exec"
 
         const res = await fetch(scriptUrl, {
@@ -50,13 +57,16 @@ const scrollNext = () => {
 
         setProjects(data);
 
+        sessionStorage.setItem("portfolio_projects", JSON.stringify(data))
         setLoading(false)
 
       } catch (err) {
         console.log(err)
 
-        setError("Failed to load Projects")
-        setLoading(false);
+        if (!cachedData) {
+          setError("Failed to load Projects")
+          setLoading(false);
+        }
       }
     }
 
@@ -70,11 +80,17 @@ const scrollNext = () => {
     return () => clearTimeout(timer)
   }, [])
 
+  const handleFilterChange = (newFilter) => {
+    setFilter(newFilter)
+    setShowAll(false)
+  }
 
   const filteredProjects = projects.filter((project) => {
     return filter === "all" || project.Category === filter;
   });
 
+  const displayedProjects = (filter === "all" && !showall) ? filteredProjects.slice(0, 6)
+    : filteredProjects;
 
   if (loading) {
     return (
@@ -100,33 +116,39 @@ const scrollNext = () => {
         <h1>Selected Editing Work</h1>
 
         <div className={styles.filters}>
-          <button onClick={() => setFilter("all")}>
+          <button onClick={() => handleFilterChange("all")}>
             All
           </button>
 
-          <button onClick={() => setFilter("Shorts")}>
+          <button onClick={() => handleFilterChange("Shorts")}>
             Short Form
           </button>
 
-          <button onClick={() => setFilter("long")}>
+          <button onClick={() => handleFilterChange("long")}>
             Long Form
           </button>
-          <button onClick={() => setFilter("Saas")}>
+          <button onClick={() => handleFilterChange("Saas")}>
             Saas
           </button>
         </div>
       </div>
       <div ref={carouselRef} className={styles.projects}>
-        {filteredProjects.map((project) => {
+        {displayedProjects.map((project) => {
           return (
-            <VideoCard key={project.Url} project = {project}/>
+            <VideoCard key={project.Url} project={project} />
           )
         })}
       </div>
       <div className={styles.swipeBtn}
-      onClick={scrollNext}>
-        <RiArrowRightLine/>
+        onClick={scrollNext}>
+        <RiArrowRightLine />
       </div>
+
+      {filter === "all" && !showall && filteredProjects.length > 6 && (
+        <div className={styles.actionContainer}>
+          <button onClick={() => setShowAll(true)} className={styles.seeMoreBtn}>See More</button>
+        </div>
+      )}
     </section>
   )
 }
