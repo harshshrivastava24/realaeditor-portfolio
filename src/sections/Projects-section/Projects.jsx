@@ -110,7 +110,7 @@ const Projects = () => {
   }
 
   return (
-    <section className={styles.projectsSection}>
+    <section id='projects' className={styles.projectsSection}>
       <div className={styles.top}>
         <div className={`${styles.head} ${isLoaded ? styles.animated : ''}`}>Projects</div>
         <h1>Selected Editing Work</h1>

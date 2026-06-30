@@ -16,7 +16,7 @@ const Services = () => {
       }, [])
 
   return (
-    <section className={styles.services}>
+    <section id='services' className={styles.services}>
       <div className={styles.head}>
         <div className={`${styles.heading} ${isLoaded? styles.animated: ''}`}>Services</div>
         <p>Everything you need to scale your content.</p>

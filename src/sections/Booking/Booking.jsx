@@ -32,7 +32,7 @@ const Booking = () => {
     }, [])
 
     return (
-        <section className={styles.bookingSection}>
+        <section id='book' className={styles.bookingSection}>
             <div className={styles.booking}>
                 <div className={styles.left}>
                     <div className={`${styles.heading} ${isLoaded ? styles.animated : ''}`}>Contact us</div>

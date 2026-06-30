@@ -4,7 +4,7 @@ import logo from '../../assets/logo.webp'
 import styles from './About.module.scss'
 const About = () => {
   return (
-    <section className={styles.aboutSection}>
+    <section id='about' className={styles.aboutSection}>
 
       <div className={styles.aboutContainer}>
         <div className={styles.head}>

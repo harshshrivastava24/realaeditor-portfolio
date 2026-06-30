@@ -14,7 +14,7 @@ const Hero = () => {
     return () => clearTimeout(timer)
   }, [])
   return (
-    <section className={styles.section1}>
+    <section id='hero' className={styles.section1}>
       <MainBg/>
         <div className={styles.left}>
           <div className={`${styles.text} ${isLoaded? styles.animated: ''}`} >
