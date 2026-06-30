@@ -1,9 +1,16 @@
 // import React from 'react'
 import { useEffect, useRef, useState } from 'react'
-// import ReactPlayer from 'react-player'
 import styles from './Projects.module.scss'
 import { RiArrowRightLine } from '@remixicon/react'
 import VideoCard from '../../components/VideoCard/VideoCard'
+
+const CATEGORIES = [
+  { label: 'All', value: 'all' },
+  { label: 'Short Form', value: 'Shorts' },
+  { label: 'Long Form', value: 'long' },
+  { label: 'SaaS', value: 'Saas' }
+];
+
 const Projects = () => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [projects, setProjects] = useState([])
@@ -45,6 +52,7 @@ const Projects = () => {
       if (cachedData) {
         setProjects(JSON.parse(cachedData));
         setLoading(false)
+        return;
       }
       try {
         const scriptUrl = "https://script.google.com/macros/s/AKfycbzVR2r-H36e9KWu-f_s6fuAwQSahz_2hjKVAi-_hzUOCvkoeJXRvOvSCSFBwsIrR1Hu/exec"
@@ -116,20 +124,14 @@ const Projects = () => {
         <h1>Selected Editing Work</h1>
 
         <div className={styles.filters}>
-          <button onClick={() => handleFilterChange("all")}>
-            All
-          </button>
-
-          <button onClick={() => handleFilterChange("Shorts")}>
-            Short Form
-          </button>
-
-          <button onClick={() => handleFilterChange("long")}>
-            Long Form
-          </button>
-          <button onClick={() => handleFilterChange("Saas")}>
-            Saas
-          </button>
+          {CATEGORIES.map((cat)=> (
+            <button
+            key={cat.value}
+            onClick={()=> handleFilterChange(cat.value)}
+            >
+              {cat.label}
+            </button>
+          ))}
         </div>
       </div>
       <div ref={carouselRef} className={styles.projects}>
